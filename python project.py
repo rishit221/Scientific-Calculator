@@ -99,6 +99,8 @@ while True:
     elif n==4:
         if len(c)!=2:
             print("The division of more than or less than 2 is not possible")
+        elif c[1]:
+            print("Division by zero is not possible")
         else:
             print("The division of the two numbers", c[0],"and", c[1], "is", division(c))
     elif n==5:
@@ -114,20 +116,26 @@ while True:
     elif n==7:
         if len(c)!=1:
             print("The square root for more than one number is not possible")
+        elif c[0]<0:
+            print("Square root of a negative number is not possible")
         else:
             print("The Square root of the number", c[0], "is", square_root(c))
     elif n==8:
         if len(c)!=1:
             print("The logarithm of more than one numbers is not possible")
+        elif c[0]<=0:
+            print("The natural log of negative numbers is not possible")
         else:
             print("The natural Logarithm of the number", c[0], "is", base_e_log(c))
     elif n==9:
         if len(c)!=1:
             print("The logarithm of more than one number is not possible")
+        elif c[0]<=0:
+            print("The logarithm of negative number is not possible")
         else:
             n=int(input("Enter the base you want to find log with"))
-            if n<=0:
-                print("Base cannot be negative")
+            if n<=0 or n=1:
+                print("Base cannot be negative or 1")
             else:
                 print("The logarithm of number", c[0],"with base", n,"is", custom_base_log(c,n))
     elif n==10:
@@ -153,27 +161,31 @@ while True:
         if len(c)!=1:
             print("The value of angle cannot be more than one numbers")
         else:
-            print("The sine of",c[0],"degrees is", cosine(c))
+            print("The cosine of",c[0],"degrees is", cosine(c))
     elif n==15:
         if len(c)!=1:
             print("The value of angle cannot be more than one numbers")
+        elif c[0]==90:
+            print("the value of Tan 90 is not defined") 
         else:
-            print("The sine of",c[0],"degrees is", tangent(c))
+            print("The tangent of",c[0],"degrees is", tangent(c))
     elif n==16:
         if len(c)!=1:
             print("The value of angle cannot be more than one numbers")
+        elif c[0]==0:
+            print("Cosecant of 0 is not defined")
         else:
-            print("The sine of",c[0],"degrees is", cosecant(c))
+            print("The cosecant of",c[0],"degrees is", cosecant(c))
     elif n==17:
         if len(c)!=1:
             print("The value of angle cannot be more than one numbers")
         else:
-            print("The sine of",c[0],"degrees is", secant(c))
+            print("The secant of",c[0],"degrees is", secant(c))
     elif n==18:
         if len(c)!=1:
             print("The value of angle cannot be more than one numbers")
         else:
-            print("The sine of",c[0],"degrees is", cotangent(c))
+            print("The cot of",c[0],"degrees is", cotangent(c))
     elif n==19:
         if len(c)!=1:
             print("The value cannot be more than one numbers")
@@ -185,7 +197,7 @@ while True:
          if len(c)!=1:
             print("The value cannot be more than one numbers")
          elif c[0]>=-1 and c[0]<=1:
-            print("The inverse of sine of",c[0],"is", arccosine(c))
+            print("The inverse of cosine of",c[0],"is", arccosine(c))
          else:
             print("The value cannot be less than -1 or more than 1")
     elif n==21:
