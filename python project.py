@@ -133,7 +133,7 @@ while True:
     elif n==10:
         if len(c)!=1:
             print("The factorial of more than one numbers is not possible")
-        elif c[0]<=0:
+        elif c[0]<0:
             print("The factorial of negative numbers is not possible")
         else:
             print(fact(c))
