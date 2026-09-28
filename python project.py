@@ -177,14 +177,14 @@ while True:
     elif n==19:
         if len(c)!=1:
             print("The value cannot be more than one numbers")
-        elif c[0]<=-1 and c[0]>=1:
+        elif c[0]>=-1 and c[0]<=1:
             print("The inverse of sine of",c[0],"is", arcsine(c))
         else:
             print("The value cannot be less than -1 or more than 1")
     elif n==20:
          if len(c)!=1:
             print("The value cannot be more than one numbers")
-         elif c[0]<=-1 and c[0]>=1:
+         elif c[0]>=-1 and c[0]<=1:
             print("The inverse of sine of",c[0],"is", arccosine(c))
          else:
             print("The value cannot be less than -1 or more than 1")
