@@ -99,7 +99,7 @@ while True:
     elif n==4:
         if len(c)!=2:
             print("The division of more than or less than 2 is not possible")
-        elif c[1]:
+        elif c[1]==0:
             print("Division by zero is not possible")
         else:
             print("The division of the two numbers", c[0],"and", c[1], "is", division(c))
@@ -134,7 +134,7 @@ while True:
             print("The logarithm of negative number is not possible")
         else:
             n=int(input("Enter the base you want to find log with"))
-            if n<=0 or n=1:
+            if n<=0 or n==1:
                 print("Base cannot be negative or 1")
             else:
                 print("The logarithm of number", c[0],"with base", n,"is", custom_base_log(c,n))
@@ -184,6 +184,9 @@ while True:
     elif n==18:
         if len(c)!=1:
             print("The value of angle cannot be more than one numbers")
+        elif c[0]==0:
+            print("The value of cot 0 is not defined")
+            
         else:
             print("The cot of",c[0],"degrees is", cotangent(c))
     elif n==19:
